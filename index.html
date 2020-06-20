@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Coffee Webiste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Naivigation -->
+    <div id="top-bar">
+        <div class="logo">My Coffee</div>
+        <div class="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="banner">
+        <div class="banner-image"></div>
+        <div class="banner-text">
+            <div class="banner-text-items">
+                <h2>My Coffee Caffe</h2>
+                <p>Welcome to The Site</p>
+                <a href="http://google.lk" class="cbtn">Explore More</a>     
+            </div>
+        </div>
+    </div>
+
+    <!-- Speciality Main Content -->
+    <div id="main-content">
+        <div class="sec-title"><h2>Speciality</h2></div>
+        <div class="con">
+            <div class="spec-box">
+                <div class="img-area"></div>
+                <div class="img-text">
+                    <h2>Pure Ingredients</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate tenetur repellat quis perferendis quae corrupti in deserunt nulla reiciendis.</p>
+                </div>
+            </div>
+            <div class="spec-box">
+                <div class="img-area"></div>
+                <div class="img-text">
+                    <h2>Quality Production</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate tenetur repellat quis perferendis quae corrupti in deserunt nulla reiciendis.</p>
+                </div>
+            </div>
+            <div class="spec-box">
+                <div class="img-area"></div>
+                <div class="img-text">
+                    <h2>Good Reputation</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cupiditate tenetur repellat quis perferendis quae corrupti in deserunt nulla reiciendis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div id="subscribe">
+        <div class="sub-box">
+            <h2>Get Notified About Our Latest Products</h2>
+            <input type="email" placeholder="Enter Your Email Here...">
+            <a href="#">Subscribe</a>
+        </div>
+    </div>
+
+    <div id="team">
+        <div class="team-title"><h2>Our Team members</h2></div>
+        <div class="mem">
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3>Dean Jones</h3>
+                <p>Production Manager</p>
+                <p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3>Jessica James</h3>
+                <p>Production Manager</p>
+                <p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+            <div class="team-member">
+                <div class="profile-pic"></div>
+                <h3>Charlie Marcus</h3>
+                <p>Production Manager</p>
+                <p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="single-footer">
+                <h2>My Coffee</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus et quia reprehenderit culpa autem? Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="single-footer">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="single-footer">
+                <h2>Get Help</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                </ul>
+            </div>
+            <div class="single-footer">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="cpy">
+            <p>Copyright &copy; 2020 - My Coffee Caffe</p>
+        </div>
+    </footer>
+
+    <!-- Script for sticky menu -->
+    <script>
+        window.addEventListener("scroll", function(){
+            let menuArea = document.getElementById('top-bar');
+            if(window.pageYOffset > 0){
+                menuArea.classList.add("cust_nav");
+            }
+            else{
+                menuArea.classList.remove("cust_nav");
+            }
+        });
+    </script>
+</body>
+</html>
