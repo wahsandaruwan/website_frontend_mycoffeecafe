@@ -12,17 +12,21 @@
 <body>
 
     <!-- Naivigation -->
-    <div id="top-bar">
-        <div class="logo">My Coffee</div>
-        <div class="menu">
+    <nav class="navbar">
+        <div class="site-title">My Coffee</div>
+        <!-- Hamburger Menu -->
+        <a href="#" class="toggle-button">
+            <i class="fas fa-bars bar"></i>
+        </a>
+        <div class="navbar-links">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
     <div id="banner">
@@ -36,8 +40,8 @@
         </div>
     </div>
 
-    <!-- Speciality Main Content -->
-    <div id="main-content">
+    <!-- Speciality Section -->
+    <div id="special-content">
         <div class="sec-title"><h2>Speciality</h2></div>
         <div class="con">
             <div class="spec-box">
@@ -73,6 +77,7 @@
         </div>
     </div>
 
+    <!-- Team Section -->
     <div id="team">
         <div class="team-title"><h2>Our Team members</h2></div>
         <div class="mem">
@@ -146,16 +151,27 @@
         </div>
     </footer>
 
-    <!-- Script for sticky menu -->
+    <!-- Script-->
     <script>
+        //For sticky menu 
         window.addEventListener("scroll", function(){
-            let menuArea = document.getElementById('top-bar');
+            let menuArea = document.getElementsByClassName('navbar')[0];
             if(window.pageYOffset > 0){
                 menuArea.classList.add("cust_nav");
             }
             else{
                 menuArea.classList.remove("cust_nav");
             }
+        });
+
+        //For toggle menu button
+        const toggleButton = document.getElementsByClassName('toggle-button')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+        const navbar = document.getElementsByClassName('navbar')[0];
+        toggleButton.addEventListener("click", function(e){
+            navbarLinks.classList.toggle('active');
+            navbar.classList.toggle('menu-bcolor');
+            e.preventDefault();
         });
     </script>
 </body>

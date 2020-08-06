@@ -14,70 +14,71 @@ body{
     /* margin: 0 130px; */
 }
 
-/* Nav Bar */
-#top-bar{
+/* Navigation Menu */
+.navbar{
     display: flex;
     width: 100%;
     height: auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #f7f1e3;
     position: fixed;
     opacity: 0.9;
-    padding: 6px 0;
     z-index: 2;
     transition: all 0.6s ease-in-out;
 }
 
-/* For Sticky Menu - Stick with JS*/
 .cust_nav{
     background: #9c3111;
 }
 
-.logo{
-    color: #f7f1e3;
-    flex: 7; /* The flex property is a shorthand property for: flex-shrink,grow and basis 
-    The flex property sets the flexible length on flexible items. | Alternative : flex-basis: 40%; */
+.site-title{
     font-size: 26px;
-    padding: 13px;
-    margin-left: 30px;
+    margin: 10px 20px 10px 20px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.menu{
-    flex: 3;
-    margin-right: 30px;
-}
-
-.menu ul{
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
     display: flex;
+}
+
+.navbar-links li{
     list-style: none;
-    margin-top: 18.5px;
-    flex-flow: row wrap;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
 }
 
-.menu ul li{
-    flex: 1;
-    text-align: center;
-}
-
-.menu ul li a{
-    color: #f7f1e3;
-    font-size: 16px;
+.navbar-links li a{
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.7s ease-in-out;
+    color: #f7f1e3;
+    padding: 20px;
+    display: block;
 }
 
-.menu ul li a:hover{
+.navbar-links ul li a:hover{
     color: #2d3436;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    color: #f7f1e3 !important;
 }
 
 /* Hero */
 #banner{
     position: relative;
     justify-content: center;
-    min-height: 80vh;
     color: #f7f1e3;
     text-align: center;
 }
@@ -105,7 +106,8 @@ body{
 
 #banner .banner-text{
     display: flex;
-    padding-top: 255px;
+    padding-top: 15%;
+    padding-bottom: 15%;
 }
 
 #banner .banner-text-items{
@@ -148,14 +150,14 @@ body{
 
 
 /* Home Main Content */
-#main-content{
+#special-content{
     height: auto;
     padding: 3% 3% 4% 3%;
     background-color: #f7f1e3;
     display: block;
 }
 
-#main-content .sec-title{
+#special-content .sec-title{
     margin: auto;
     width: 40%;
     display: flex;
@@ -164,7 +166,7 @@ body{
     color: #2d3436;
 }
 
-#main-content .sec-title::before{
+#special-content .sec-title::before{
     content: '';
     width: 100%;
     height: 7px;
@@ -173,7 +175,7 @@ body{
     top: 20px;
 }
 
-#main-content .sec-title::after{
+#special-content .sec-title::after{
     content: '';
     width: 100%;
     height: 7px;
@@ -182,14 +184,14 @@ body{
     top: 20px;
 }
 
-#main-content .con, #team .con{
+#special-content .con{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-#main-content .spec-box{
+#special-content .spec-box{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -206,12 +208,12 @@ body{
     transition: all 0.7s ease-in-out;
 }
 
-#main-content .spec-box:hover{
+#special-content .spec-box:hover{
     background: #f38564;
     color: #2d3436;
 }
 
-#main-content .img-area{
+#special-content .img-area{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,32 +228,31 @@ body{
     transition: all 1.4s ease-in-out;
 }
 
-#main-content .img-area:hover{
+#special-content .img-area:hover{
     transform: rotateY(360deg);
 }
 
-#main-content .spec-box:nth-child(1) .img-area{
+#special-content .spec-box:nth-child(1) .img-area{
     background-image: url(./img/a.jpg);
 }
 
-#main-content .spec-box:nth-child(2) .img-area{
+#special-content .spec-box:nth-child(2) .img-area{
     background-image: url(./img/b.jpg);
 }
 
-#main-content .spec-box:nth-child(3) .img-area{
+#special-content .spec-box:nth-child(3) .img-area{
     background-image: url(./img/c.jpg);
 }
 
-#main-content .img-text h2{
+#special-content .img-text h2{
     font-size: 20px;
     font-weight: 500;
     line-height: 48px;
     margin-bottom: 10px;
 }
 
-#main-content .img-text p{
+#special-content .img-text p{
     font-size: 15px;
-    font-weight: 400;
     line-height: 23px;
 }
 
@@ -517,22 +518,14 @@ footer{
 
 /* Media Queries */
 @media(max-width:1100px){
-    /* Nav Bar */
-    .logo{
-        flex: 4;
-    }
-    
-    .menu{
-        flex: 6;
-    }
-
     /* Hero */
     #banner .banner-text{
-        padding-top: 280px;
+        padding-top: 22%;
+        padding-bottom: 22%;
     }
 
     #banner .banner-text-items h2{
-        font-size: 3.5em;
+        font-size: 2.9em;
     }
     
     #banner .banner-text-items p{
@@ -545,7 +538,7 @@ footer{
     }
 
     /* Home Main */
-    #main-content .sec-title, #team .team-title{
+    #special-content .sec-title, #team .team-title{
         font-size: 19px;
     }
 
@@ -564,13 +557,50 @@ footer{
 }
 
 @media(max-width:600px){
+    /* Navifation Menu */
+    .site-title{
+        font-size: 20px;
+    }
+
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .active{
+        display: flex;
+    }
+
+    .menu-bcolor{
+        background: #9c3111;
+    }
+
     /* Hero */
     #banner .banner-text{
-        padding-top: 260px;
+        padding-top: 30%;
+        padding-bottom: 30%;
     }
 
     #banner .banner-text-items h2{
-        font-size: 2.8em;
+        font-size: 2em;
     }
     
     #banner .banner-text-items p{
@@ -583,7 +613,7 @@ footer{
     }
 
     /* Home Main */
-    #main-content .sec-title, #team .team-title{
+    #special-content .sec-title, #team .team-title{
         font-size: 16px;
         width: 50%;
     }
@@ -606,11 +636,12 @@ footer{
 @media(max-width:320px){
     /* Hero */
     #banner .banner-text{
-        padding-top: 120px;
+        padding-top: 25%;
+        padding-bottom: 25%;
     }
 
     #banner .banner-text-items h2{
-        font-size: 2.4em;
+        font-size: 1.5em;
     }
     
     #banner .banner-text-items p{
@@ -623,7 +654,7 @@ footer{
     }
 
     /* Home Main */
-    #main-content .sec-title, #team .team-title{
+    #special-content .sec-title, #team .team-title{
         font-size: 14px;
         width: 50%;
     }
